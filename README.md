@@ -37,3 +37,5 @@
 * git push
 
 use username and password to complete the push or setup OpenSSL keys to verify account
+
+# update 2014/5/12
