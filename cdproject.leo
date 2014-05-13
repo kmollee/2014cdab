@@ -26,7 +26,9 @@
 <v t="2014spring.20140506093255.1795"><vh>組立約束條件</vh></v>
 <v t="2014spring.20140506093255.1796"><vh>組立 0 程式</vh></v>
 </v>
-<v t="2014spring.20140508134612.2129"><vh>第十二週任務</vh></v>
+<v t="2014spring.20140508134612.2129" a="E"><vh>第十二週任務</vh>
+<v t="2014spring.20140513154549.2535"><vh>組立約束條件屬性</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
@@ -40,8 +42,30 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
 </v>
+<v t="2014spring.20140513092629.1905"><vh>@path wsgi/programs/cdag3</vh>
+<v t="2014spring.20140513092629.1906"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513154549.2217"><vh>@path wsgi/programs/cdag4</vh>
+<v t="2014spring.20140513154549.2218"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="kmolII_lite.20140513162816.2130" a="E"><vh>@path wsgi/programs/cdag5</vh>
+<v t="kmolII_lite.20140513162816.2131"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513154549.2225" a="E"><vh>@path wsgi/programs/cdag10</vh>
+<v t="2014spring.20140513154549.2226"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513154549.2221"><vh>@path wsgi/programs/cdag14</vh>
+<v t="2014spring.20140513154549.2222"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513154549.2229" a="E"><vh>@path wsgi/programs/cdag16</vh>
+<v t="2014spring.20140513154549.2230"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513092629.2151" a="E"><vh>@path wsgi/programs/cdag17</vh>
+<v t="2014spring.20140513092629.2152"><vh>@edit __init__.py</vh></v>
+</v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
+<v t="2014spring.20140513154549.2534"><vh>@edit man.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -53,9 +77,6 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
-<v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
-</v>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
@@ -68,14 +89,17 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140506161101.1960" a="E"><vh>@path 2ag4</vh>
 <v t="2014spring.20140506161101.1961"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430001511.1599"><vh>@path 2ag5</vh>
+<v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
 <v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1964" a="E"><vh>@path 2ag6</vh>
 <v t="2014spring.20140506161101.1965"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
+<v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140512203125.1905" a="E"><vh>@path 2ag9</vh>
+<v t="2014pythonE.20140512203125.1906"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1968"><vh>@path 2ag10</vh>
 <v t="2014spring.20140506161101.1969"><vh>@edit doc.txt</vh></v>
@@ -92,7 +116,7 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140506161101.1980" a="E"><vh>@path 2ag14</vh>
 <v t="2014spring.20140506161101.1981"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
+<v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1984" a="E"><vh>@path 2ag17</vh>
@@ -134,7 +158,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429104126.1755"></t>
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
-<t tx="2014pythonE.20140503095658.1615"></t>
+<t tx="2014pythonE.20140512203125.1905"></t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
@@ -703,6 +727,69 @@ asmcomp.SetConstraints (constrs, void null);
    本週的任務一即是希望透過目前已經完成的協同環境配置, 利用流程圖進行表示, 將各模組的功能與設置目的加以整合, 並將內容放入各組的文書處理區.
    
    但是, 由於全班協同的雲端網站目前並沒有內容管理系統, 因此本週將設法嵌入 CMSimply 套件, 充當全班協同網站的內容管理系統, 以便導引全班協同的相關內容.</t>
+<t tx="2014spring.20140513092629.1905"></t>
+<t tx="2014spring.20140513092629.2151"></t>
+<t tx="2014spring.20140513154549.2217"></t>
+<t tx="2014spring.20140513154549.2221"></t>
+<t tx="2014spring.20140513154549.2225"></t>
+<t tx="2014spring.20140513154549.2229"></t>
+<t tx="2014spring.20140513154549.2535">Constraint Attributes
+約束條件屬性
+
+Methods and Properties Introduced:
+衍生的方法與性質
+
+pfcConstraintAttributes.Create()
+建立約束條件屬性
+
+pfcConstraintAttributes.Force
+強制約束條件
+
+pfcConstraintAttributes.Ignore
+忽略約束條件
+
+The method pfcConstraintAttributes.Create() returns the constraint attributes object based on the values of the following input
+parameters:
+
+約束條件建立方法, 依照下列輸入變數而傳回不同的約束條件屬性
+
+• Ignore—Constraint is ignored during regeneration. Use this capability to store extra constraints on the component, which allows you to quickly toggle between different constraints.
+
+是否忽略 – 約束條件在更新模型時是否忽略, 可以利用此一忽略特性, 將額外的約束條件附加在組立元件上, 讓使用者可在不同約束條件間切換
+
+• Force—Constraint has to be forced for line and point alignment.
+
+是否強制 – 當使用線或點對齊約束時, 可以強制進行約束.
+
+• None—No constraint attributes. This is the default value.
+
+無約束屬性 – 內定為無約束屬性.
+
+static pfcConstraintAttributes Create (boolean Force, boolean Ignore)
+
+Creates a new constraint attributes object.
+
+用來建立新的約束條件屬性物件
+
+Parameters:
+
+輸入變數
+
+Force
+
+強制變數
+
+true if the constraint should be forced (required for ASM_CONSTRAINT_PNT_ON_LINE).
+
+若設為真, 表示約束條件將會強制執行 (使用點在線上約束時必須設為真)
+
+Ignore
+
+忽略變數
+
+true if the constraint is stored with the component, but not enforced. false if the constraint is enforced.
+
+若設為真, 表示約束將附加在元件上, 但卻不強制執行, 若設為偽, 則該約束條件將會強制執行.</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -871,5 +958,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
+<t tx="kmolII_lite.20140513162816.2130"></t>
 </tnodes>
 </leo_file>
