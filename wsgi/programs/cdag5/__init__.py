@@ -21,7 +21,7 @@ class CDAG5(object):
     import programs.cdag5 as cdag5
     root.cdag5 = cdag5.CDAG5()
     
-    則程式啟動後, 可以利用 /cdag1/cube1 呼叫函式執行
+    則程式啟動後, 可以利用 /cdag5/cube1 呼叫函式執行
     '''
     @cherrypy.expose
     def cube1(self, *args, **kwargs):
