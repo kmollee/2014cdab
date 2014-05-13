@@ -65,9 +65,6 @@
 </v>
 <v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
-<v t="2014pythonE.20140513100851.2135"><vh>@edit q1.py</vh></v>
-<v t="2014pythonE.20140513100851.2136"><vh>@edit q2.py</vh></v>
-<v t="2014pythonE.20140513100851.2137"><vh>@edit q3.py</vh></v>
 </v>
 <v t="2014spring.20140506161101.1960" a="E"><vh>@path 2ag4</vh>
 <v t="2014spring.20140506161101.1961"><vh>@edit doc.txt</vh></v>
