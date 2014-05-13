@@ -52,32 +52,62 @@
 <p>鼓式煞車</p>
 <h1 id="結果與討論-1">結果與討論</h1>
 <p>這裡是結果與討論</p>
-<h1 id="網際鼓式煞車設計2ag3">網際鼓式煞車設計(2ag3)</h1>
+<h1 id="w12任務2ag3">W12任務(2ag3)</h1>
+<p>請各組將第九週考試的摘要報告放入 Github 協同專案中的分組報告區</p>
+<h1 id="摘要報告">摘要報告</h1>
+<pre><code>第一題：</code></pre>
+<p>請寫一個執行時可以列出以十為底對數表的網際 Python 程式，然後 Push 到個人 bitbucket 空間，而且同步指到 OpenShift 個人帳號上執行。</p>
+<pre><code>解題心得：</code></pre>
+<p>可利用程式算出對數的值，就不需要一個一個按計算機。</p>
+<pre><code>第二題：</code></pre>
+<p>請在個人的 OpenShift 平台上建立一個能夠列印出與九九乘法表結果完全相同的網際程式，接著在乘法表上端加上兩個輸入表單，讓使用者輸入兩個整數，按下送出鍵後，程式會列出以此兩個整數為基底的乘法表，例如：若兩個欄位都輸入: 9，則列出九九乘法表，若輸入 9，20，則列出 9×20 的乘法表。</p>
+<p>解題心得：</p>
+<p>利用網站輸入值並算出，並需要有兩個輸入表單。</p>
+<pre><code>第三題：</code></pre>
+<p>請在各組的雲端 dokuwiki 中，新增帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料，並將製作過程與驗證流程拍成 flv 後上傳到個人的 Vimeo 資料區，並將連結放在個人第九週頁面。</p>
+<p>解題心得：</p>
+<p>可以利用程式創造多人帳密，一起管理網站，減少一個一個創建帳密，又會有被盜用的風險。</p>
+<p>import math count = 0 text='%04d' for i in range(100,200+10): print(text%round(math.log(i/100,10)*10000,0),end='-') count += 1 if(count == 10): print() count = 0</p>
+<p>class Example(object): <em>cp</em>config = { # if there is no utf-8 encoding, no Chinese input available 'tools.encode.encoding': 'utf-8', 'tools.sessions.on' : True, 'tools.sessions.storage_type' : 'file', 'tools.sessions.locking' : 'explicit', 'tools.sessions.storage_path' : data_dir+'/tmp', # session timeout is 60 minutes 'tools.sessions.timeout' : 60 }</p>
+<p><span class="citation">@cherrypy.expose</span> def index(self): output = ''</p>
+<pre><code>form = &#39;&#39;&#39;
+&lt;form action=&#39;action&#39;&gt;
+num1:&lt;INPUT type=&#39;text&#39; name=&#39;num1&#39;&gt;
+num2:&lt;INPUT type=&#39;text&#39;  name=&#39;num2&#39;&gt;
+&lt;input type=submit&gt;
+&lt;input type=reset&gt;
+&lt;/form&gt;
+&#39;&#39;&#39;
+output += form
+return output</code></pre>
+<p><span class="citation">@cherrypy.expose</span> def action(self, num1=9, num2=9): num1 = int(num1) num2 = int(num2) output = '' for i in range(num1): for j in range(num2): output += str(i) + '<em>' + str(j) + '=' + str(i</em>j) + '<br />' return output</p>
+<p>import hashlib #convert user_password into sha1 encoded string def gen_password(user_password): return hashlib.sha1(user_password.encode(&quot;utf-8&quot;)).hexdigest() text='abc%03d' for i in range(1,399+1): print(text%(i)+':'+gen_password(text%(i))+':'+text%(i)+'<span class="citation">@gmail.com</span>:'+text%(i)+'<span class="citation">@gmail.com</span>:'+'user')</p>
+<h1 id="網際鼓式煞車設計2ag4">網際鼓式煞車設計(2ag4)</h1>
 <p>有關鼓式煞車</p>
 <h1 id="程式設計架構-1">程式設計架構</h1>
 <p>鼓式煞車</p>
 <h1 id="結果與討論-2">結果與討論</h1>
 <p>這裡是結果與討論</p>
-<h1 id="網際鼓式煞車設計2ag4">網際鼓式煞車設計(2ag4)</h1>
-<p>有關鼓式煞車</p>
-<h1 id="程式設計架構-2">程式設計架構</h1>
-<p>鼓式煞車</p>
-<h1 id="結果與討論-3">結果與討論</h1>
-<p>這裡是結果與討論</p>
 <h1 id="網際四連桿機構設計2ag5">網際四連桿機構設計(2ag5)</h1>
 <p>有關連桿設計</p>
-<h1 id="程式設計架構-3">程式設計架構</h1>
+<h1 id="程式設計架構-2">程式設計架構</h1>
 <p>連桿計算</p>
-<h1 id="結果與討論-4">結果與討論</h1>
+<h1 id="結果與討論-3">結果與討論</h1>
 <p>這裡是結果與討論</p>
 <p>by 2014cdag5</p>
 <h1 id="網際鼓式煞車設計2ag6">網際鼓式煞車設計(2ag6)</h1>
+<p>有關鼓式煞車</p>
+<h1 id="程式設計架構-3">程式設計架構</h1>
+<p>鼓式煞車</p>
+<h1 id="結果與討論-4">結果與討論</h1>
+<p>這裡是結果與討論</p>
+<h1 id="網際鼓式煞車設計2ag7">網際鼓式煞車設計(2ag7)</h1>
 <p>有關鼓式煞車</p>
 <h1 id="程式設計架構-4">程式設計架構</h1>
 <p>鼓式煞車</p>
 <h1 id="結果與討論-5">結果與討論</h1>
 <p>這裡是結果與討論</p>
-<h1 id="網際鼓式煞車設計2ag7">網際鼓式煞車設計(2ag7)</h1>
+<h1 id="網際鼓式煞車設計2ag7-1">網際鼓式煞車設計(2ag7)</h1>
 <p>有關鼓式煞車</p>
 <h1 id="程式設計架構-5">程式設計架構</h1>
 <p>鼓式煞車</p>
