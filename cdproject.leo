@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -102,7 +102,7 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 </v>
 <v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
-<v t="2014spring.20140503125211.2098" a="E"><vh>@path wsgi/programs/cdag1</vh>
+<v t="2014spring.20140503125211.2098"><vh>@path wsgi/programs/cdag1</vh>
 <v t="2014spring.20140503125211.2099"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
@@ -113,6 +113,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="2014spring.20140513154549.2217"><vh>@path wsgi/programs/cdag4</vh>
 <v t="2014spring.20140513154549.2218"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="kmolII_lite.20140513162816.2130"><vh>@path wsgi/programs/cdag5</vh>
+<v t="kmolII_lite.20140513162816.2131"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140513154549.2225" a="E"><vh>@path wsgi/programs/cdag10</vh>
 <v t="2014spring.20140513154549.2226"><vh>@edit __init__.py</vh></v>
@@ -151,7 +154,7 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="2014spring.20140506161101.1960" a="E"><vh>@path 2ag4</vh>
 <v t="2014spring.20140506161101.1961"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430001511.1599"><vh>@path 2ag5</vh>
+<v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
 <v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1964" a="E"><vh>@path 2ag6</vh>
@@ -3450,5 +3453,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
+<t tx="kmolII_lite.20140513162816.2130"></t>
 </tnodes>
 </leo_file>
