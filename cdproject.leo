@@ -28,10 +28,8 @@
 </v>
 <v t="2014spring.20140508134612.2129"><vh>第十二週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
-<v t="course-mde-tw.20140417093332.2028" a="E"
-expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
-<v t="2014spring.20140508134612.2197" a="E"
-expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
+<v t="course-mde-tw.20140417093332.2028" a="E"><vh>@file application</vh></v>
+<v t="2014spring.20140508134612.2197"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
 <v t="2014spring.20140503125211.2098" a="E"><vh>@path wsgi/programs/cdag1</vh>
@@ -39,6 +37,9 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2100" a="E"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014pythonE.20140513095751.1909" a="E"><vh>@path wsgi/programs/cdag3</vh>
+<v t="2014pythonE.20140513095751.1910"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
@@ -139,6 +140,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429160432.1847"></t>
 <t tx="2014pythonE.20140503095658.1615"></t>
 <t tx="2014pythonE.20140512203125.1905"></t>
+<t tx="2014pythonE.20140513095751.1909"></t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
