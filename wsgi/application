@@ -495,6 +495,10 @@ root.cdag2 = cdag2.CDAG2()
 import programs.cdag10 as cdag10
 root.cdag10 = cdag10.CDAG10()
 
+# 以下為 cdag16 的模組導入與連結設定
+import programs.cdag16 as cdag16
+root.cdag16 = cdag16.CDAG16()
+
 # 以下為 cdag30 的模組導入與連結設定
 import programs.cdag30 as cdag30
 root.cdag30 = cdag30.CDAG30()
