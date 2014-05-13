@@ -26,11 +26,13 @@
 <v t="2014spring.20140506093255.1795"><vh>組立約束條件</vh></v>
 <v t="2014spring.20140506093255.1796"><vh>組立 0 程式</vh></v>
 </v>
-<v t="2014spring.20140508134612.2129"><vh>第十二週任務</vh></v>
+<v t="2014spring.20140508134612.2129" a="E"><vh>第十二週任務</vh>
+<v t="2014spring.20140513154549.2535"><vh>組立約束條件屬性</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
-<v t="2014spring.20140508134612.2197" a="O"><vh>@file cmsimply.py</vh>
+<v t="2014spring.20140508134612.2197" a="EO"><vh>@file cmsimply.py</vh>
 <v t="2014spring.20140508134612.2198"><vh>&lt;&lt;declarations&gt;&gt; (cmsimply.py)</vh></v>
 <v t="2014spring.20140508134612.2199"><vh>downloadlist_access_list</vh></v>
 <v t="2014spring.20140508134612.2200"><vh>sizeof_fmt</vh></v>
@@ -128,6 +130,7 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
+<v t="2014spring.20140513154549.2534"><vh>@edit man.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -3282,6 +3285,63 @@ def index(self, filepath):
 <t tx="2014spring.20140513154549.2221"></t>
 <t tx="2014spring.20140513154549.2225"></t>
 <t tx="2014spring.20140513154549.2229"></t>
+<t tx="2014spring.20140513154549.2535">Constraint Attributes
+約束條件屬性
+
+Methods and Properties Introduced:
+衍生的方法與性質
+
+pfcConstraintAttributes.Create()
+建立約束條件屬性
+
+pfcConstraintAttributes.Force
+強制約束條件
+
+pfcConstraintAttributes.Ignore
+忽略約束條件
+
+The method pfcConstraintAttributes.Create() returns the constraint attributes object based on the values of the following input
+parameters:
+
+約束條件建立方法, 依照下列輸入變數而傳回不同的約束條件屬性
+
+• Ignore—Constraint is ignored during regeneration. Use this capability to store extra constraints on the component, which allows you to quickly toggle between different constraints.
+
+是否忽略 – 約束條件在更新模型時是否忽略, 可以利用此一忽略特性, 將額外的約束條件附加在組立元件上, 讓使用者可在不同約束條件間切換
+
+• Force—Constraint has to be forced for line and point alignment.
+
+是否強制 – 當使用線或點對齊約束時, 可以強制進行約束.
+
+• None—No constraint attributes. This is the default value.
+
+無約束屬性 – 內定為無約束屬性.
+
+static pfcConstraintAttributes Create (boolean Force, boolean Ignore)
+
+Creates a new constraint attributes object.
+
+用來建立新的約束條件屬性物件
+
+Parameters:
+
+輸入變數
+
+Force
+
+強制變數
+
+true if the constraint should be forced (required for ASM_CONSTRAINT_PNT_ON_LINE).
+
+若設為真, 表示約束條件將會強制執行 (使用點在線上約束時必須設為真)
+
+Ignore
+
+忽略變數
+
+true if the constraint is stored with the component, but not enforced. false if the constraint is enforced.
+
+若設為真, 表示約束將附加在元件上, 但卻不強制執行, 若設為偽, 則該約束條件將會強制執行.</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */

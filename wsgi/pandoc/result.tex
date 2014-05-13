@@ -268,15 +268,69 @@ bitbucket 空間，而且同步指到 OpenShift 個人帳號上執行。
 
 可以利用程式創造多人帳密，一起管理網站，減少一個一個創建帳密，又會有被盜用的風險。
 
+import math count = 0 text=`\%04d' for i in range(100,200+10):
+print(text\%round(math.log(i/100,10)*10000,0),end=`-') count += 1
+if(count == 10): print() count = 0
+
+class Example(object): \emph{cp}config = \{ \# if there is no utf-8
+encoding, no Chinese input available `tools.encode.encoding': `utf-8',
+`tools.sessions.on' : True, `tools.sessions.storage\_type' : `file',
+`tools.sessions.locking' : `explicit', `tools.sessions.storage\_path' :
+data\_dir+`/tmp', \# session timeout is 60 minutes
+`tools.sessions.timeout' : 60 \}
+
+@cherrypy.expose def index(self): output = ''
+
+\begin{verbatim}
+form = '''
+<form action='action'>
+num1:<INPUT type='text' name='num1'>
+num2:<INPUT type='text'  name='num2'>
+<input type=submit>
+<input type=reset>
+</form>
+'''
+output += form
+return output
+\end{verbatim}
+
+@cherrypy.expose def action(self, num1=9, num2=9): num1 = int(num1) num2
+= int(num2) output = `' for i in range(num1): for j in range(num2):
+output += str(i) +'\emph{`+ str(j) +'=' + str(i}j) + `' return output
+
+import hashlib \#convert user\_password into sha1 encoded string def
+gen\_password(user\_password): return
+hashlib.sha1(user\_password.encode(``utf-8'')).hexdigest()
+text=`abc\%03d' for i in range(1,399+1):
+print(text\%(i)+`:'+gen\_password(text\%(i))+`:'+text\%(i)+`@gmail.com:'+text\%(i)+`@gmail.com:'+`user')
+
 \section{網際鼓式煞車設計(2ag4)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag4}
 
-有關鼓式煞車
+github連結 40123107: https://github.com/40123107 40123120:
+https://github.com/40123120 cdag4:
+https://github.com/2014cdag4/2014cdag4
 
-\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-1}
+cmsimply連結 40123107: https://github.com/40123107 40123120:
+https://github.com/40123120 40123150: http://cdg4-40123150.rhcloud.com/
+===
 
-鼓式煞車
-
-\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-2}
+第九週 1.(第一題 30\%) 請寫一個執行時可以列出以十為底對數表的網際 Python
+程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift
+個人帳號上執行.
+http://cdg4-40123150.rhcloud.com/get\_page?heading=\%E7\%AC\%AC\%E4\%B8\%80\%E9\%A1\%8C
+2.(第二題 40\%) 請在個人的 OpenShift
+平台上建立一個能夠列印出與九九乘法表結果完全相同的網際程式,
+接著在乘法表上端加上兩個輸入表單, 讓使用者輸入兩個整數, 按下送出鍵後,
+程式會列出以此兩個整數為基底的乘法表, 例如: 若兩個欄位都輸入: 9,
+則列出九九乘法表, 若輸入 9, 20, 則列出 9×20 的乘法表.
+http://cdg4-40123150.rhcloud.com/example/ http://vimeo.com/92577008
+3.(第三題 30\%) 請在各組的雲端 dokuwiki 中, 新增帳號與密碼都是由 abc001
+\textasciitilde{} abc399 字串所組成的 399 名用戶登入對應資料,
+並將製作過程與驗證流程拍成 flv 後上傳到個人的 Vimeo 資料區,
+並將連結放在個人第九週頁面.
+https://php-40123150.rhcloud.com/doku.php?id=start
+http://vimeo.com/92577072 === w12 請連結
+https://github.com/2014cdag4/2014cdag4 ===
 
 這裡是結果與討論
 
@@ -284,17 +338,29 @@ bitbucket 空間，而且同步指到 OpenShift 個人帳號上執行。
 
 有關連桿設計
 
-\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-2}
+\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-1}
 
 連桿計算
 
-\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-3}
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-2}
 
 這裡是結果與討論
 
 by 2014cdag5
 
 \section{網際鼓式煞車設計(2ag6)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag6}
+
+有關鼓式煞車
+
+\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-2}
+
+鼓式煞車
+
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-3}
+
+這裡是結果與討論
+
+\section{網際鼓式煞車設計(2ag7)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag7}
 
 有關鼓式煞車
 
@@ -306,19 +372,21 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag7)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag7}
+\section{網際四連桿機構設計(2ag8)}\label{ux7db2ux969bux56dbux9023ux687fux6a5fux69cbux8a2dux8a082ag8}
 
-有關鼓式煞車
+有關連桿設計
 
 \section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-4}
 
-鼓式煞車
+連桿計算
 
 \section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-5}
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag7)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag7-1}
+by 2014cdag5
+
+\section{網際鼓式煞車設計(2ag9)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag9}
 
 有關鼓式煞車
 
@@ -330,7 +398,9 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag7)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag7-1}
+這是第九組
+
+\section{網際鼓式煞車設計(2ag10)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag10}
 
 有關鼓式煞車
 
@@ -342,7 +412,7 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag10)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag10}
+\section{網際鼓式煞車設計(2ag11)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag11}
 
 有關鼓式煞車
 
@@ -354,7 +424,7 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag11)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag11}
+\section{網際鼓式煞車設計(2ag12)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag12}
 
 有關鼓式煞車
 
@@ -366,7 +436,7 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag12)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag12}
+\section{網際鼓式煞車設計(2ag13)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag13}
 
 有關鼓式煞車
 
@@ -378,7 +448,10 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag13)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag13}
+\textless{}\textless{}\textless{}\textless{}\textless{}\textless{}\textless{}
+HEAD 網際鼓式煞車設計(2ag14) ======= 網際鼓式煞車設計(2ag10)
+\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}
+26a5b9324111e15820203a5b96463a4196def80e ===
 
 有關鼓式煞車
 
@@ -390,7 +463,7 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag14)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag14}
+\section{網際鼓式煞車設計(2ag15)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag15}
 
 有關鼓式煞車
 
@@ -426,15 +499,27 @@ by 2014cdag5
 
 這裡是結果與討論
 
-\section{網際鼓式煞車設計(2ag21)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag21}
+\section{網際鼓式煞車設計(2ag18)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag18}
 
-有關鼓式煞車
+有關鼓式煞車g18
 
 \section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-14}
 
 鼓式煞車
 
 \section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-15}
+
+這裡是結果與討論
+
+\section{網際鼓式煞車設計(2ag21)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag21}
+
+有關鼓式煞車
+
+\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb-15}
+
+鼓式煞車
+
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-16}
 
 這裡是結果與討論00123
 
@@ -447,7 +532,7 @@ by 2014cdag5
 
 定義凸輪設計公式
 
-\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-16}
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-17}
 
 有關凸倫程式設計的結果與討論
 
