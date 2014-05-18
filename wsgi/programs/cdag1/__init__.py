@@ -14,13 +14,13 @@ class CDAG1(object):
 <a href="/static/fourbar.7z">fourbar.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
 '''
         return outstring
-    
-    ''' 
+
+    '''
     假如採用下列規畫
-    
+
     import programs.cdag1 as cdag1
     root.cdag1 = cdag1.CDAG1()
-    
+
     則程式啟動後, 可以利用 /cdag1/cube1 呼叫函式執行
     '''
     @cherrypy.expose
@@ -40,7 +40,7 @@ class CDAG1(object):
     var solid = session.GetModel("axle_5.prt",pfcCreate("pfcModelType").MDL_PART);
         '''
         outstring = '''
-    <!DOCTYPE html> 
+    <!DOCTYPE html>
     <html>
     <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -89,8 +89,8 @@ try
     // 測試  stl 轉檔
     //var stl_csys = "PRT_CSYS_DEF";
     //var stl_instrs = new pfcCreate ("pfcSTLASCIIExportInstructions").Create(stl_csys);
-    //stl_instrs.SetQuality(10);  
-    //solid.Export("v:/tmp/filename_5_"+count+".stl", stl_instrs); 
+    //stl_instrs.SetQuality(10);
+    //solid.Export("v:/tmp/filename_5_"+count+".stl", stl_instrs);
     // 結束測試轉檔
     //if (!newfile.Status) {
             //alert("pwlMdlSaveAs failed (" + newfile.ErrorCode + ")");
@@ -106,11 +106,11 @@ catch (err)
     </html>
     '''
         return outstring
-        
+
     @cherrypy.expose
     def fourbar1(self, *args, **kwargs):
         outstring = '''
-    <!DOCTYPE html> 
+    <!DOCTYPE html>
     <html>
     <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -127,13 +127,13 @@ session.SetConfigOption("comp_placement_assumptions","no");
 var identityMatrix = pfcCreate("pfcMatrix3D");
 // 建立 identity 位置矩陣
 for (var x = 0; x < 4; x++)
-	for (var y = 0; y < 4; y++)
-	{
-		if (x == y)
-			identityMatrix.Set(x, y, 1.0);
-		else
-			identityMatrix.Set(x, y, 0.0);
-	}
+    for (var y = 0; y < 4; y++)
+    {
+        if (x == y)
+            identityMatrix.Set(x, y, 1.0);
+        else
+            identityMatrix.Set(x, y, 0.0);
+    }
 // 利用 identityMatrix 建立 transf
 var transf = pfcCreate("pfcTransform3D").Create(identityMatrix);
 // 取得目前的工作目錄
@@ -148,18 +148,18 @@ var assembly = model;
 
 /**----------------------------------------------- link0 -------------------------------------------------------------**/
     //檔案目錄，建議將圖檔放置工作目錄下較方便使用
-	var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName("v:/home/fourbar/link0.prt");
-	// 若 link1.prt 在 session 則直接取用
-	var componentModel = session.GetModelFromDescr(descr);
-	// 若 link1.prt 不在 session 則從工作目錄中載入 session
-	var componentModel = session.RetrieveModel(descr);
-	// 若 link1.prt 已經在 session 則放入組立檔中
-	if (componentModel != void null)
-	{
-		//注意這個 asmcomp 即為設定約束條件的本體
-		//asmcomp 為特徵物件, 直接將零件, 以 transf 座標轉換放入組立檔案中
-		var asmcomp = assembly.AssembleComponent(componentModel, transf);
-	}
+    var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName("v:/home/fourbar/link0.prt");
+    // 若 link1.prt 在 session 則直接取用
+    var componentModel = session.GetModelFromDescr(descr);
+    // 若 link1.prt 不在 session 則從工作目錄中載入 session
+    var componentModel = session.RetrieveModel(descr);
+    // 若 link1.prt 已經在 session 則放入組立檔中
+    if (componentModel != void null)
+    {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件, 直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent(componentModel, transf);
+    }
 
 // 建立約束條件變數
 var constrs = pfcCreate("pfcComponentConstraints");
@@ -169,40 +169,40 @@ var constrs = pfcCreate("pfcComponentConstraints");
 var asmDatums = new Array("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
 // 設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
 var compDatums = new Array("FRONT", "TOP", "RIGHT");
-	// 建立 ids 變數, intseq 為 sequence of integers 為資料類別, 使用者可以經由整數索引擷取此資料類別的元件, 第一個索引為 0
+    // 建立 ids 變數, intseq 為 sequence of integers 為資料類別, 使用者可以經由整數索引擷取此資料類別的元件, 第一個索引為 0
            // intseq 等同 Python 的數列資料?
-	var ids = pfcCreate("intseq");
-	// 建立路徑變數
-	var path = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
-	// 採用互動式設定相關的變數
-	var MpfcSelect = pfcCreate("MpfcSelect");
+    var ids = pfcCreate("intseq");
+    // 建立路徑變數
+    var path = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+    // 採用互動式設定相關的變數
+    var MpfcSelect = pfcCreate("MpfcSelect");
 // 利用迴圈分別約束組立與零件檔中的三個定位平面
 for (var i = 0; i < 3; i++)
 {
-	// 設定組立參考面
-	var asmItem = assembly.GetItemByName (pfcCreate("pfcModelItemType").ITEM_SURFACE, asmDatums[i]);
-	// 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
-	if (asmItem == void null)
-	{
-		interactFlag = true;
-		continue;
-	}
-	// 設定零件參考面
-	var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, compDatums[i]);
-	// 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
-	if (compItem == void null)
-	{
-		interactFlag = true;
-		continue;
-	}
-	var asmSel = MpfcSelect.CreateModelItemSelection(asmItem, path);
-	var compSel = MpfcSelect.CreateModelItemSelection(compItem, void null);
-	var constr = pfcCreate("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
-	constr.AssemblyReference = asmSel;
-	constr.ComponentReference = compSel;
-	constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (false, false);
-	// 將互動選擇相關資料, 附加在程式約束變數之後
-	constrs.Append(constr);
+    // 設定組立參考面
+    var asmItem = assembly.GetItemByName (pfcCreate("pfcModelItemType").ITEM_SURFACE, asmDatums[i]);
+    // 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+    if (asmItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    // 設定零件參考面
+    var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, compDatums[i]);
+    // 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+    if (compItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    var asmSel = MpfcSelect.CreateModelItemSelection(asmItem, path);
+    var compSel = MpfcSelect.CreateModelItemSelection(compItem, void null);
+    var constr = pfcCreate("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+    constr.AssemblyReference = asmSel;
+    constr.ComponentReference = compSel;
+    constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (false, false);
+    // 將互動選擇相關資料, 附加在程式約束變數之後
+    constrs.Append(constr);
 }
 
 // 設定組立約束條件
@@ -217,7 +217,7 @@ if (componentModel != void null)
 {
             // 注意這個 asmcomp 即為設定約束條件的本體
             // asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
-	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
 }
 // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
 var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
@@ -234,38 +234,38 @@ var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("
 // 建立約束條件變數
 var constrs = pfcCreate ("pfcComponentConstraints");
 for (var i = 0; i < 2; i++)
-	{
+    {
                       // 設定組立參考面, asmItem 為 model item
-		var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
                       // 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
-		if (asmItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
                       // 設定零件參考面, compItem 為 model item
-		var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
-		if (compItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
                       // 採用互動式設定相關的變數
-		var MpfcSelect = pfcCreate ("MpfcSelect");
-		var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
-		var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-		var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
-		constr.AssemblyReference  = asmSel;
-		constr.ComponentReference = compSel;
-		constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (true, false);
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (true, false);
                       // 將互動選擇相關資料, 附加在程式約束變數之後
-		constrs.Append(constr);
-	}
+        constrs.Append(constr);
+    }
 // 設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
 // 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
 asmcomp.SetConstraints (constrs, void null);
 
-	
+
 /**-------------------------------------------------------------------------------------------------------------------**/
 
 /**----------------------------------------------- link2 -------------------------------------------------------------**/
@@ -274,7 +274,7 @@ var componentModel = session.GetModelFromDescr (descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
 {
-	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
 }
 var ids = pfcCreate ("intseq");
 ids.Append(featID+1);
@@ -286,31 +286,31 @@ var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAIN
 var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
 var constrs = pfcCreate ("pfcComponentConstraints");
 for (var i = 0; i < 2; i++)
-	{
-		var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
-		if (asmItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
-		if (compItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var MpfcSelect = pfcCreate ("MpfcSelect");
-		var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
-		var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-		var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
-		constr.AssemblyReference  = asmSel;
-		constr.ComponentReference = compSel;
-		constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
-		constrs.Append (constr);
-	}
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
 asmcomp.SetConstraints (constrs, void null);
 
-	
+
 /**-------------------------------------------------------------------------------------------------------------------**/
 
 
@@ -320,7 +320,7 @@ var componentModel = session.GetModelFromDescr (descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
 {
-	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
 }
 var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
 var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
@@ -333,28 +333,28 @@ subassembly = subPath.Leaf;
 var asmDatums = new Array ("A_2");
 var compDatums = new Array ("A_1");
 for (var i = 0; i < 1; i++)
-	{
-		var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
-		if (asmItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
-		if (compItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var MpfcSelect = pfcCreate ("MpfcSelect");
-		var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
-		var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-		var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
-		constr.AssemblyReference  = asmSel;
-		constr.ComponentReference = compSel;
-		constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
-		constrs.Append (constr);
-	}
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
 asmcomp.SetConstraints (constrs, void null);
 
 
@@ -366,28 +366,28 @@ subassembly = subPath.Leaf;
 var asmDatums = new Array ("A_2", "TOP");
 var compDatums = new Array ("A_2", "BOTTON");
 for (var i = 0; i < 2; i++)
-	{
-		var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
-		if (asmItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
-		if (compItem == void null)
-		{
-			interactFlag = true;
-			continue;
-		}
-		var MpfcSelect = pfcCreate ("MpfcSelect");
-		var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
-		var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-		var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
-		constr.AssemblyReference  = asmSel;
-		constr.ComponentReference = compSel;
-		constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, true);
-		constrs.Append (constr);
-	}
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, true);
+        constrs.Append (constr);
+    }
 asmcomp.SetConstraints (constrs, void null);
 
 /**-------------------------------------------------------------------------------------------------------------------**/
@@ -428,7 +428,7 @@ session.GetModelWindow (assembly).Repaint();
     @cherrypy.expose
     def twentylinks(self, *args, **kwargs):
         outstring = '''
-    <!DOCTYPE html> 
+    <!DOCTYPE html>
     <html>
     <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -459,7 +459,7 @@ session.GetModelWindow (assembly).Repaint();
     // 查驗有無 model, 或 model 類別是否為組立件
       if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
         throw new Error (0, "Current model is not an assembly.");
-     
+
       var assembly = model;
       var descr =
         pfcCreate ("pfcModelDescriptor").CreateFromFileName ("link1.prt");
@@ -483,7 +483,8 @@ session.GetModelWindow (assembly).Repaint();
     // 在 assembly 模型中建立子零件所對應的路徑
     var subPath =
         pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
-    document.write("id 為:"+subPath.ComponentIds(0));
+    document.write("id 為:"+subPath.ComponentIds(0) + '<br/>');
+    document.write();
           subassembly = subPath.Leaf;
     //  設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
       var asmDatums = new Array ("A_3", "TOP", "ASM_RIGHT");
@@ -496,7 +497,7 @@ session.GetModelWindow (assembly).Repaint();
       var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
     // 建立約束條件變數
       var constrs = pfcCreate ("pfcComponentConstraints");
-     
+
     // 利用迴圈分別約束組立與零件檔中的三個定位平面
       for (var i = 0; i < 2; i++)
         {
@@ -525,10 +526,10 @@ session.GetModelWindow (assembly).Repaint();
           var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
           var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
           var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
-          
+
           constr.AssemblyReference  = asmSel;
           constr.ComponentReference = compSel;
-    // static pfcConstraintAttributes Create (boolean Force, boolean Ignore) 
+    // static pfcConstraintAttributes Create (boolean Force, boolean Ignore)
     // 必須 Force execution of this constraint 才會抑制 comp_placement_assumptions 為 yes 的作動?
           constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
     // 將互動選擇相關資料, 附加在程式約束變數之後
